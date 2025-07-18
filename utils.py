@@ -2,11 +2,11 @@ import os
 import json
 
 class Utils:
-    def exibir_status(self, personagem):
+    def exibir_status(personagem):
         print(f'{personagem.nome}: Vida = {personagem.vida} | Ataque = {personagem.ataque} | Defesa = {personagem.defesa}')
 
-    def escolher_acao(self):
-        print('\n Ações disponíveis: ')
+    def escolher_acao():
+        print('\nAções disponíveis: ')
         print('1. Atacar')
         print('2. Usar poção')
         print('3. Dialogar')
@@ -15,7 +15,7 @@ class Utils:
     def limpar_tela():
         os.system('cls' if os.name == 'nt' else 'clear')
 
-    def carregar_personagens(self, caminho, classe):
+    def carregar_personagens(caminho, classe):
         personagens = []
         try:
             with open(caminho, 'r', encoding='UTF-8') as arquivo:
@@ -29,6 +29,6 @@ class Utils:
                     )
                     personagens.append(personagem)
                 return personagens
-        except Exception:
-            print(f'Erro ao carregar personagens {Exception}')
+        except Exception as e:
+            print(f'Erro ao carregar personagens {e}')
             return []
