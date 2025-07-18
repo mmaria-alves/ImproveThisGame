@@ -1,0 +1,30 @@
+[
+    {
+        "nome": "Diana",
+        "idade": "25",
+        "vida": "60",
+        "ataque": "12",
+        "defesa": "3"
+    },
+    {
+        "nome": "Lara",
+        "idade": "23",
+        "vida": "60",
+        "ataque": "7",
+        "defesa":"5"
+    },
+    {
+        "nome": "Beatrice",
+        "idade": "21",
+        "vida": "65",
+        "ataque": "10",
+        "defesa": "4"
+    },
+    {
+        "nome": "Luna",
+        "idade": "20",
+        "vida": "70",
+        "ataque": "8",
+        "defesa": "2"
+    }
+]
