@@ -11,10 +11,12 @@ class Heroi(Personagem):
         self.refens_salvos = 0
 
     def atacar(self, alvo):
+        ''' Reduz a vida de outro personagem atacado pelo herói'''
         print(f'{self.nome} ataca {alvo.nome}!')
         alvo.sofrer_dano(self.ataque)
 
     def usar_pocao(self):
+        '''Aumenta a vida do personagem. O valor padrão de cura é 20'''
         if self.pocoes > 0:
             self.vida += 20
             self.pocoes -= 1
@@ -23,8 +25,6 @@ class Heroi(Personagem):
             print(f'Oh não! {self.nome} não tem mais poções de cura!')
     
     def salvar_refem(self):
+        '''Herói salva um refém'''
         self.refens_salvos += 1
         print(f'{self.nome} salvou um refém! Total de refens salvos: {self.refens_salvos}')
-    
-    def __str__(self):
-        return f'Herói: {self.nome}, Idade: {self.idade}, Vida: {self.vida}'
