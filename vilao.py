@@ -7,7 +7,6 @@ class Vilao(Personagem):
     """
     def __init__(self, nome, vida, ataque, defesa):
         super().__init__(nome, vida, ataque, defesa)
-        niveis_validos = ['Baixa', 'Média', 'Alta']
 
     def atacar(self, alvo):
         """
@@ -15,6 +14,3 @@ class Vilao(Personagem):
         """
         print(f'{self.nome} ataca {alvo.nome}!')
         alvo.sofrer_dano(self.ataque)
-
-    def __str__(self):
-        return f'Vilão: {self.nome}, Idade: {self.idade}, Vida: {self.vida}, Maldade: {self.maldade}'
